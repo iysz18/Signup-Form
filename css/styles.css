@@ -44,7 +44,7 @@ body {
     height: var(--main-height);
     width: var(--aside-img-width);
     position: relative;
-    background-image: url("./assets/leafs.jpg");
+    background-image: url("/assets/leafs.jpg");
     background-position: left; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
 }
