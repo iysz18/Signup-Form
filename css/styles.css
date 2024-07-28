@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Every font that needs to be imported (online and offline from /fonts folder */
+@font-face {
+    font-family: Norse;
+    src: url(/fonts/Norse-Bold.ttf) format('truetype');
+}
+/* Font: Open Sans from Google */
+
+:root {
+    --main-height: 960px;
+    --main-width: 1390px;
+    --aside-img-width: 450px;
+
+    /* styling color etc */
+    --background-color: #f2f2f2;
+    --border-radius: 10px;
+    --btn-create-color: #596D48;
+}
+
+/* Center the main content on the page, remove white borders from page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: gray;
+}
+
+/* This section contains the main-container css styling and its children */
+.main-container {
+    display: flex;
+    width: var(--main-width);
+    height: var(--main-height);
+    background: var(--background-color);
+    /* border: solid gray 2px; */
+    font-family: "Open Sans";
+
+}
+
+.aside-img {
+    height: var(--main-height);
+    width: var(--aside-img-width);
+    position: relative;
+    background-image: url("./assets/leafs.jpg");
+    background-position: left; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+/* CSS styling for the black block which contains the odin logo and text */
+.aside-img .logo-txt-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 155px;
+    top: 215px;
+    background-color: rgb(0, 0, 0, 0.6);
+    gap: 20px;
+}
+
+.odin-icon { height: 85%; } /* set the height of the odin icon */
+.odin-txt {
+    font-size: 92px;
+    font-family: Norse;
+    color: white;
+    position: relative;
+    top: 10px;
+}
+
+/* CSS for the right-container: txt-wrapper which contains the paragraphs hero-txt
+    and the span as a block element */
+.right-container {
+    width: 100%;
+}
+    
+.txt-wrapper {
+    /* font */
+    font-size: 22px;
+    font-weight: 550;
+    /* dimension settings */
+    width: 670px; 
+    margin-top: 145px;
+    margin-left: 50px;
+    margin-bottom: 60px;
+}
+
+span {
+    display: block;
+}
+
+/* CSS for the form and each element inside it */
+.form-and-legend {
+    width: 100%;
+    height: 303px;
+    background: white;
+    box-shadow: 0px 4px 4px rgb(211, 211, 211);
+    display: flex;
+    align-items: center;
+}
+
+.form-container {
+    margin-left: 50px;
+}
+
+legend { 
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    position: relative;
+    right: 3px;
+ }
+ 
+form {
+    display: flex;
+    gap: 75px;
+}
+
+ 
+label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgb(81, 81, 81);
+    padding-bottom: 3px;
+}
+ 
+.left-form-elements {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 220px;
+    height: 27px;
+    margin-bottom: 25px;
+    border: 0; /* this must be set otherwise outline can't be seen */
+    outline: 1px solid #E5E7EB;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: 1px solid blue;
+    box-shadow: 4px 4px 5px rgb(197, 197, 197);
+}
+
+input:required {
+    outline: 1px solid red;
+}
+
+.right-form-elements {
+    display: flex;
+    flex-direction: column;
+}
+
+#error {
+    font-size: 11px;
+    position: absolute;
+    bottom: 320px;
+    color: red;
+}
+
+#pw:invalid {
+    outline-color: red;
+}
+
+#pw:valid {
+    outline-color: green;
+}
+
+#confirm-pw:invalid {
+    outline-color: red;
+}
+
+#confirm-pw:valid {
+    outline-color: green;
+}
+
+.create-acc {
+    padding: 40px 50px;
+}
+
+.create-acc button {
+    font: "Open Sans";
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    padding-inline: 55px;
+    padding-block: 15px;
+    background: var(--btn-create-color);
+    margin-bottom: 25px;
+}
+
+
+.create-acc a {
+    color: var(--btn-create-color);
+    font-weight: 700;
+}
+
+.create-acc p {
+    font-weight: 600;
+    font-family: "Open Sans";
+}
